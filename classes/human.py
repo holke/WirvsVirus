@@ -57,13 +57,27 @@ class human(object):
         self.posy += self.movy
 
 
-    def collisions(self, humans, normalize=True):
+    def collisions(self, humans, player, normalize=True):
         # Collisions mechanics
 
         # Can't collide with anything when you're six feet under ground.
         if not self.collisions_active:
             return
-
+        
+        # Collision with player
+        dx = self.posx - player.posx
+        dy = self.posy - player.posy
+        if (dx**2 + dy**2) < (2*self.r)**2:
+            vx, vy = self.v, self.v
+            angle = np.arctan2(dy, dx)
+            self.movx = np.cos(angle) * self.v
+            self.movy = np.sin(angle) * self.v
+            if self.state == 'infected' or self.state == 'ill':
+                player.infection()
+            if player.state == 'infected' or player.state == 'ill':
+                self.infection()
+        
+        # Collision with other humans
         for id in range(self.id+1, len(humans)):
             dx = self.posx - humans[id].posx
             dy = self.posy - humans[id].posy

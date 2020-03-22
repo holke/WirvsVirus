@@ -1,5 +1,6 @@
 import pygame
 from img_lib import get_image
+from pygame.time import get_ticks as time_now
 
 class player(object):
 
@@ -9,6 +10,8 @@ class player(object):
         self.screen = screen
         self.img = pygame.transform.scale(get_image('myself3.png'), (30, 30))
         self.render_img()
+        self.state = 'well'
+        self.time_infected = None
 
     def handle_input(self, key):
         # linke Pfeiltaste wird gedrueckt
@@ -25,3 +28,8 @@ class player(object):
 
     def render_img(self):
         self.screen.blit(self.img, (self.posx, self.posy) )
+
+    def infection(self):
+        if self.state in ['recovered','ill','dead']: return
+        self.state = 'infected'
+        self.time_infected = time_now()
