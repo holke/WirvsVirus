@@ -6,7 +6,7 @@ There are already multiple simulation approaches that illustrate and explain the
 
 Currently a python version is implemented that can be executed locally.
 We are working on an implementation in javascript that can be directly integrated
-in our homepage LINK.
+in our homepage [www.youvsvirus.de](http://www.youvsvirus.de).
  
 ## Versions and dependencies:
 
