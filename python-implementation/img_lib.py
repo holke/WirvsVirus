@@ -16,7 +16,7 @@ def get_image(path):
          # if the image has been loaded already return it
          # otherwise load it
         if image == None:
-                canonicalized_path = os.path.join("_img", path)
+                canonicalized_path = os.path.join("../_img", path)
                 image = pygame.image.load(canonicalized_path)
                 _image_library[path] = image
         return image
