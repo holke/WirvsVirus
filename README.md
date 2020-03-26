@@ -1,8 +1,13 @@
 # WirvsVirus
 We aim to develop a simulation for the virus, challenge 0307
 
-There are already multiple simulation approaches that illustrate and explain the spread of the coronavirus. These approaches are to be expanded to include the possibility of simulating the effects of one's own actions on the course of the pandemic. Users can simulate their real or fictitious behaviour and get a reaction how this effects others. 
-  
+There are already multiple simulation approaches that illustrate and explain the spread of the coronavirus. These approaches are to be expanded to include the possibility of simulating the effects of one's own actions on the course of the pandemic. Users can simulate their real or fictitious behaviour and get a reaction how this effects others.
+
+
+Currently a python version is implemented that can be executed locally.
+We are working on an implementation in javascript that can be directly integrated
+in our homepage LINK.
+ 
 ## Versions and dependencies:
 
 - Python version: 3.8
@@ -13,16 +18,16 @@ Recommended: Create a virtual environment (e.g. using conda) and install all req
 
 ## How to run the simulation
 
-In the main directory just execute the main.py file with python:
+In the 'python-implementation' directory just execute the youvsvirus.py file with python:
 
 ```
-python3 main.py
+python3 youvsvirus.py
 ```
 
 or
 
 ```
-python main.py
+python youvsvirus.py
 ```
 
 And then use the arrow keys to escape the virus.
@@ -30,7 +35,7 @@ And then use the arrow keys to escape the virus.
 You can additionally provide a social distancing factor between 0 and 1 as an argument.
 
 ```
-python3 main.py 0.8
+python3 youvsvirus.py 0.8
 ```
 
 simulates 80% social distancing.
