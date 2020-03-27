@@ -31,14 +31,6 @@ python youvsvirus.py
 
 And then use the arrow keys to escape the virus.
 
-You can additionally provide a social distancing factor between 0 and 1 as an argument.
-
-```
-python3 youvsvirus.py 0.8
-```
-
-simulates 80% social distancing.
-
 ## Repo structure and coding style
 
 - Every class gets its own file in the classes folder or a subfolder of the classes folder
